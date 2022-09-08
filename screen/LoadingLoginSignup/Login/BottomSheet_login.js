@@ -77,22 +77,9 @@ const BottomSheet_login = (props) => {
     console.log(screenHeight)
     const Login=()=>(       //Login 아이콘 클릭시 띄울 화면
         <>
-            <ScrollView>
-                <TextInput
-                placeholder='카톡 1초 로그인'/>
-                <TextInput
-                placeholder='카톡 2초 로그인'/>
-                <TextInput
-                placeholder='카톡 3초 로그인'/>
-                <TextInput
-                placeholder='카톡 4초 로그인'/>
-                <TextInput
-                placeholder='카톡 5초 로그인'/>
-                <TextInput
-                placeholder='카톡 6초 로그인'/>
-                <TextInput
-                placeholder='카톡 6초 로그인'/>
-            </ScrollView>
+            <View>
+                <Image source={require('../../../imageResource/jobDaHan/kakao_login_medium_narrow.png')}/>
+            </View>
             <TouchableOpacity 
                 onPress={()=>
                 {
