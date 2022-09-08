@@ -17,7 +17,6 @@ function App(){
     <ToastProvider>
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown:false}}>
-          <Stack.Screen name = 'Test' component = {Test}/>
           <Stack.Screen name = 'Loading' component = {Loading}/>
           <Stack.Screen name = 'Login' component = {Login} />
           <Stack.Screen name = 'FindPassword' component = {FindPassword}/>
@@ -36,4 +35,5 @@ export default App
 
 // <Stack.Screen name = 'Profile' component={Profile}/>
 // <Stack.Screen name = 'Notice' component={Notice}/>
+//          <Stack.Screen name = 'Test' component = {Test}/>
 

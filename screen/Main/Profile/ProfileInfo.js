@@ -77,6 +77,7 @@ const ProfileInfo=()=>{
                 <TextInput 
                     placeholder={placeHolderPw}
                     style={styles.sectionStyle}
+                    secureTextEntry={true}
                     onChangeText={pw => setPw(pw)}
                     defaultValue={placeHolderPw}/>
             </View>
