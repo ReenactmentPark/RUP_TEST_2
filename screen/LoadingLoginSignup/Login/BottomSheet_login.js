@@ -15,6 +15,7 @@ import {
     KeyboardAvoidingView
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import KakaoSDK from '@actbase/react-kakaosdk'
 import styles from './style'
 
 const BottomSheet_login = (props) => {
@@ -28,6 +29,14 @@ const BottomSheet_login = (props) => {
     const [userEmail,setUserEmail]=useState('')
     const [userPw,setUserPw]=useState('')
     const [userPwAgain,setUserPwAgain]=useState('')
+    
+    const signInWithKakao=async()=>{
+        await KakaoSDK.init("e0dfba26b5bfa3667a1482cd64f4feaa")
+        const tokens = await KakaoSDK.login();
+        console.log(tokens)
+        setModalVisible(false)
+        navigation.reset({routes:[{name:'Main'}]})
+      }
 
 
     const isBlank=()=>{
@@ -78,7 +87,9 @@ const BottomSheet_login = (props) => {
     const Login=()=>(       //Login 아이콘 클릭시 띄울 화면
         <>
             <View>
-                <Image source={require('../../../imageResource/jobDaHan/kakao_login_medium_narrow.png')}/>
+                <TouchableOpacity onPress={signInWithKakao}>
+                    <Image source={require('../../../imageResource/jobDaHan/kakao_login_medium_narrow.png')}/>
+                </TouchableOpacity>
             </View>
             <TouchableOpacity 
                 onPress={()=>
