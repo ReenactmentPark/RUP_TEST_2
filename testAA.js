@@ -65,6 +65,7 @@ const testAA=()=>{
             type:'custom',
             duration:1500,
             animationType:'zoom-in',
+            offsetTop:100
         })
     }
     return(
